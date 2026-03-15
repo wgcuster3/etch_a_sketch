@@ -1,0 +1,1 @@
+Create a new repository for the etch-a-sketch project.
