@@ -21,6 +21,32 @@ function createRow (gridSize) {
         container.appendChild(row);
     }
 }
+
+function createNewGrid () {
+    let gridSize = prompt("Enter a grid size between 1 - 100");
+
+    if (gridSize === ""){
+        alert("Please Enter a value");
+        return;
+    }
+
+    if (parseInt(gridSize) < 1){
+        alert("Too small");
+        return;
+    }
+
+    if (parseInt(gridSize) > 100){
+        alert("Too large");
+        return;
+    }
+
+    container.textContent = '';
+
+    createRow(parseInt(gridSize));
+}
+
 const container = document.querySelector("#container"); 
-console.log(container.clientHeight);
+const newGridBtn = document.querySelector("#newGridBtn");
+
+newGridBtn.addEventListener('click', createNewGrid);
 createRow(16);
