@@ -3,7 +3,7 @@ function fillRow(row, gridSize){
         let gridItem = document.createElement("div")
         gridItem.style.border = "thin solid #a6a2a3";
         gridItem.style.flexGrow = "1";
-        gridItem.style.minHeight = "20px";
+        gridItem.style.height = ((container.clientHeight / gridSize) - 2) + "px";
         gridItem.addEventListener('mouseover', () => {
             gridItem.style.backgroundColor = "#d1065e";
         });
@@ -21,6 +21,6 @@ function createRow (gridSize) {
         container.appendChild(row);
     }
 }
-const container = document.querySelector("#container");
-
+const container = document.querySelector("#container"); 
+console.log(container.clientHeight);
 createRow(16);
