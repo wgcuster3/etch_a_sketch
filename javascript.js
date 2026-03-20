@@ -4,8 +4,13 @@ function fillRow(row, gridSize){
         gridItem.style.border = "thin solid #a6a2a3";
         gridItem.style.flexGrow = "1";
         gridItem.style.height = ((container.clientHeight / gridSize) - 2) + "px";
+        
+        let r = Math.floor(Math.random() * (255));
+        let g = Math.floor(Math.random() * (255));
+        let b = Math.floor(Math.random() * (255));
+
         gridItem.addEventListener('mouseover', () => {
-            gridItem.style.backgroundColor = "#d1065e";
+            gridItem.style.backgroundColor = `rgb(${r},${g},${b})`;
         });
         row.appendChild(gridItem);
     }
